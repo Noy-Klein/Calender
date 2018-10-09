@@ -71,8 +71,9 @@ class EventsHandler {
 
         })
     }
-}
 
 
 export default EventsHandler;
 
+var dateControl = document.querySelector('input[type="date"]');
+dateControl.value = '2018-06-01';

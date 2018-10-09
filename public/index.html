@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" media="screen" href="font-awesome/css/font-awesome.css" />
 </head>
 
+
 <body>
     <br>
     <br>
@@ -47,22 +48,24 @@
     <!-- <body> -->
     <h1 id="month" class="text-center">Month</h1>
 
-    <table>
-        <button id="before" class="btn btn-primary" type="button">Before</button>
-        <button id="next" class="btn btn-primary" type="button">Next</button>
 
+    <table class="calender">
+            <button id="before" class="btn btn-secondary" type="button">Before</button>
+            <button id="next"class="btn btn-secondary" type="button">Next</button>
+    
+        
 
 
         <tr>
-            <th>Sunday</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
+            <th class="text-center">Sunday</th>
+            <th class="text-center">Monday</th>
+            <th class="text-center">Tuesday</th>
+            <th class="text-center">Wednesday</th>
+            <th class="text-center">Thursday</th>
+            <th class="text-center">Friday</th>
+            <th class="text-center">Saturday</th>
         </tr>
-        <tr>
+        <tr class="tr1">
             <td>
                 <p>1</p>
                 <div id="1"></div>
@@ -92,7 +95,7 @@
                 <div id="7"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="tr2">
             <td>
                 <p>8</p>
                 <div id="8"></div>
@@ -122,7 +125,7 @@
                 <div id="13"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="tr3">
             <td>
                 <p>14</p>
                 <div id="14"></div>
@@ -152,7 +155,7 @@
                 <div id="20"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="tr4">
             <td>
                 <p>21</p>
                 <div id="21"></div>
@@ -182,7 +185,7 @@
                 <div id="27"></div>
             </td>
         </tr>
-        <tr>
+        <tr class="tr5">
             <td>
                 <p>28</p>
                 <div id="28"></div>
@@ -217,9 +220,11 @@
     <button class="add btn btn-primary" id="myBtn">Add Event</button>
 
 
+
 <script src="jquery/dist/jquery.js"></script>
 <script src="main.js"></script>
 
 </body>
+
 
 </html>
