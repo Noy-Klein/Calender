@@ -20,7 +20,7 @@ class EventsRenderer {
                     let source = $('#event-template').html();
                     let template = Handlebars.compile(source);
                     let newHTML = template(events[e]);
-                    $('#i').append(newHTML); //מה שבסוגריים זה האיידי של התא בטבלה ששווה ל(i)
+                    $('#'+i).append(newHTML); //מה שבסוגריים זה האיידי של התא בטבלה ששווה ל(i)
                 }
             }
         }

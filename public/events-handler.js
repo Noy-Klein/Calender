@@ -8,6 +8,7 @@ class EventsHandler {
     nextMonth() {
         $("").on('click', function() {
 
+
         })
     }
     previousMonth() {
