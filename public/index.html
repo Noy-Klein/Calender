@@ -2,14 +2,12 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap\dist\css\bootstrap.css" />
-
-    
-    <link rel="stylesheet" type="text/css" media="screen" href="font-awesome-5-css\css\fontawesome-all.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-
+    <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../node_modules/font-awesome/css/font-awesome.css" />
 </head>
     <body>
+        
         <div class="col-sm-6">
             <div class="calendar-section">
               <div id='calendar'></div>
@@ -24,11 +22,12 @@
               </table>
             </div>
           </div>
-    <h2 class="text-center">Add Event</h2>
+                  <!-- <h1 id="month" class="text-center">Month</h1> -->
+
     <br>
     
     <!-- Trigger/Open The Modal -->
-    <button class="btn btn-primary" id="myBtn">Add Event</button>
+    
     <br>
     <br>
     <!-- The Modal -->
@@ -64,12 +63,14 @@
 </head>
 
 <body>
+        <h1 id="month" class="text-center">Month</h1>
+
     <table>
-        <tr>
-            <button class="btn btn-primary" type="button">Before</button>
-            <th id="month" class="text-center">Month</th>
+            <button id="before" class="btn btn-primary" type="button">Before</button>
             <button id="next"class="btn btn-primary" type="button">Next</button>
-        </tr>
+    
+        
+
         <tr>
             <th>Sunday</th>
             <th>Monday</th>
@@ -126,7 +127,10 @@
         </tr>
 
     </table>
-</body>
+    <button class="btn btn-primary" id="myBtn">Add Event</button>
+
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+
 <script src="main.js"></script>
-<script src="jquery\dist\jquery.js"></script>
+</body>
 </html>
