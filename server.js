@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost/calendarDB', function() {
   console.log("DB connection established!!!");
 })
 
-const event = require('./modules/event');
+const event = require('./modules/event');   
 var app = express();
 app.use(express.static('public'));
 app.use(express.static('node_modules'));
