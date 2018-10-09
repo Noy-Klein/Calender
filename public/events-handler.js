@@ -4,50 +4,61 @@ class EventsHandler {
         this.eventsRenderer = eventsRenderer;
     }
 
+    onLoad() {
+        this.eventsRepository.getEvents().then(() => {
+            this.eventsRenderer.renderEvents(this.eventsRepository.events)
+        })
+    }
+
     nextMonth() {
-        $("").on('click', function() {
+        $("").on('click', function () {
 
 
         })
     }
     previousMonth() {
-        $("").on('click', function() {
+        $("").on('click', function () {
 
         })
     }
 
     registerAddEvent() {
         const model = $("#mymodel");
-        const button = $("#mybtn");
-        button.on('click', function(){
-            model.css('display', 'none');
+        const button = $(".add");
+        button.on('click', function () {
+            model.css('display', 'block');
         })
     }
 
-    close(){
+    close() {
+        const span = document.getElementsByClassName("close")[0];
         const model = $("#mymodel");
-        const span = $('.close')[0];
-        span.on('click', function(){
-            model.css('dispaly', 'none');
-        })
+        span.onclick = function () {
+            model.css('display', 'none');
+        }
     }
 
     addEventDetails() {
-        $('.submit').on("click", function () {
+        $('.submit').on("click", () => {
             let title = $(".title").val();
             let day = $(".day").val();
             let month = $(".month").val();
             let year = $(".Year").val();
-            let time = $("time").val();
-            let location = $("location").val();
+            let time = $(".time").val();
+            let location = $(".location").val();
             let image = $(".image").val();
-            if(title === "") {alert("Please enter title")}
-            if(day === "") {alert("Please enter day")}
-            if(month === "") {alert("Please enter month")}
-            if(year === "") {alert("Please enter year")}
-            this.eventsRepository.addEvent(title, day, month, year, time, location, image).then(()=> {
-                this.eventsRepository.renderEvents(this.eventsRepository.events)
-            })
+            if (title === "") { alert("Please enter title") }
+            if (day === "") { alert("Please enter day") }
+            if (month === "") { alert("Please enter month") }
+            if (year === "") { alert("Please enter year") }
+            else {
+                this.eventsRepository.addEvent(title, day, month, year, time, location, image).then(() => {
+                    this.eventsRenderer.renderEvents(this.eventsRepository.events);
+                        const model = $("#mymodel");
+                        model.css('display', 'none');
+                    })
+            }
+
         })
 
     }
@@ -92,5 +103,5 @@ class EventsHandler {
 }
 export default EventsHandler;
 
-var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2018-06-01';
+// var dateControl = document.querySelector('input[type="date"]');
+// dateControl.value = '2018-06-01';
