@@ -235,30 +235,9 @@
     <script id='header-template' type="text/x-handlebars-template">
         <h1>{{name}}</h1>
     </script>
-    <link rel=stylesheet type=text/css
-          href=jqueryui/css/smoothness/jquery-ui-1.8.16.custom.css />
-    
-    <div id="dialog" title="Window title">
-    </div>
-    
-    <script>
-    
-    $("div#dialog").dialog ({
-      buttons : {
-        "Yes" : function ()
-        {
-          $("div#dialog").dialog ("close");
-        },
-        "No" : function ()
-        {
-        }
-      }
-    }).prev().find(".ui-dialog-titlebar-close").hide ();
-    
-    </script>
-<script src="../node_modules/jquery/dist/jquery.js"></script>
-    
-<script src="main.js"></script>
+
+<script src="jquery/dist/jquery.js"></script>
+<script src="main.js" type="module"></script>
 
 </body>
 
