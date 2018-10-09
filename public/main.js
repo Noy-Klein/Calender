@@ -1,14 +1,13 @@
-
-import EventsRepository from './events-repository'
-import EventsRenderer from './events-renderer'
-import EventsHandler from './events-handler'
+import EventsRepository from './events-repository.js';
+import EventsRenderer from './events-renderer.js';
+import EventsHandler from './events-handler.js';
 
 let eventsRepository = new EventsRepository();
 let eventsRenderer = new EventsRenderer();
 let eventsHandler = new EventsHandler(eventsRepository, eventsRenderer)
 
-
-eventsHandler.addEvent();
+eventsHandler.onLoad();
+eventsHandler.registerAddEvent();
 eventsHandler.close();
 eventsHandler.addEventDetails();
 

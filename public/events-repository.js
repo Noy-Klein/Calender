@@ -2,7 +2,7 @@ class EventsRepository {
     constructor() {
         this.events = [];
     }
-    getEvent() {
+    getEvents() {
         return $.get('/events').then((data)=> {
             this.events = data;
         })
@@ -19,7 +19,8 @@ class EventsRepository {
             image: image
         }
         return $.post('/events', event).then((data)=> {
-            this.events.push(data)
+            this.events.push(data);
+            console.log(data);
         })
     }
 }
