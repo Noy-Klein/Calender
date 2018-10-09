@@ -7,11 +7,10 @@ let eventsRepository = new EventsRepository();
 let eventsRenderer = new EventsRenderer();
 let eventsHandler = new EventsHandler(eventsRepository, eventsRenderer)
 
+
 eventsHandler.addEvent();
 eventsHandler.close();
 eventsHandler.addEventDetails();
-
-
 
 
 
