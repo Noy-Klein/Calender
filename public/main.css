@@ -23,8 +23,8 @@ td{
 }
 body {font-family: Arial, Helvetica, sans-serif;}
 
-    /* The Modal (background) */
-    .modal {
+    /* The model (background) */
+    .model {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
@@ -38,8 +38,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
     
-    /* Modal Content */
-    .modal-content {
+    /* model Content */
+    .model-content {
         background-color: #fefefe;
         margin: auto;
         padding: 20px;

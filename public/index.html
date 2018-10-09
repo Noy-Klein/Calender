@@ -3,74 +3,58 @@
 
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="font-awesome/css/font-awesome.css" />
 </head>
-    <body>
-        
-        <div class="col-sm-6">
-            <div class="calendar-section">
-              <div id='calendar'></div>
-            </div> 
-          </div>
-          
-          <div class="col-sm-6">
-            <div class="event-description-section">
-              <table class="table order-details-table">
-                <tbody id="insert_here">
-                </tbody>
-              </table>
-            </div>
-          </div>
-                  <!-- <h1 id="month" class="text-center">Month</h1> -->
 
-    <br>
-    
-    <!-- Trigger/Open The Modal -->
-    
-    <br>
-    <br>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    
-      <!-- Modal content -->
-      <div class="text-center" class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="h3">Your Event Details:</h3>
-    <input type= "add-title" placeholder="Title">
-    <br>
-    <br>
-    
-    <input id="date" type="date" value="2017-06-01">
-    <br>
-    <br>
-    
-    <input type= "add-time" placeholder="Time">
-    <br>
-    <br>
-    
-    <input type= "add-image" placeholder="Image">
-    <br>
-    <br>
-    
-    <input type= "add-location" placeholder="Location">
-    <br>
-    <br>
-    <button class="btn btn-secondary">Add</button>
-      </div>
-    
-    </div>
-    
-</head>
 
 <body>
-        <h1 id="month" class="text-center">Month</h1>
+    <br>
+    <br>
+    <!-- The model -->
+    <div id="mymodel" class="model">
+
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <input type="text" class="title" placeholder="Title">
+            <br>
+            <div style="margin: 0 auto">
+                <input type="text" class="day" placeholder="Day" style="width: 70px; display: inline-block">
+                <input type="text" class="month" placeholder="Month" style="width: 70px; display: inline-block"">
+            <input type="
+                    text" class="Year" placeholder="Year" style="width: 70px; display: inline-block">
+                <br>
+                <br>
+            </div>
+            <input type="
+                    text" class="time" placeholder="Time">
+            <br>
+            <br>
+
+            <input type="text" class="image" placeholder="Image">
+            <br>
+            <br>
+
+            <input type="text" class="location" placeholder="Location">
+            <br>
+            <br>
+            <button class="submit btn btn-primary">Add</button>
+        </div>
+
+    </div>
+
+    <!-- </head> -->
+
+    <!-- <body> -->
+    <h1 id="month" class="text-center">Month</h1>
+
 
     <table class="calender">
             <button id="before" class="btn btn-secondary" type="button">Before</button>
             <button id="next"class="btn btn-secondary" type="button">Next</button>
     
         
+
 
         <tr>
             <th class="text-center">Sunday</th>
@@ -82,56 +66,165 @@
             <th class="text-center">Saturday</th>
         </tr>
         <tr class="tr1">
-            <td class="td1">1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
+            <td>
+                <p>1</p>
+                <div id="1"></div>
+            </td>
+            <td>
+                <p>2</p>
+                <div id="2"></div>
+            </td>
+            <td>
+                <p>3</p>
+                <div id="3"></div>
+            </td>
+            <td>
+                <p>4</p>
+                <div id="4"></div>
+            </td>
+            <td>
+                <p>5</p>
+                <div id="5"></div>
+            </td>
+            <td>
+                <p>6</p>
+                <div id="6"></div>
+            </td>
+            <td>
+                <p>7</p>
+                <div id="7"></div>
+            </td>
         </tr>
         <tr class="tr2">
-            <td>8</td>
-            <td>9</td>
-            <td>10</td>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
+            <td>
+                <p>8</p>
+                <div id="8"></div>
+            </td>
+            <td>
+                <p>9</p>
+                <div id="9"></div>
+            </td>
+            <td>
+                <p>10</p>
+                <div id="10"></div>
+            </td>
+            <td>
+                <p>1</p>
+                <div id="1"></div>
+            </td>
+            <td>
+                <p>11</p>
+                <div id="11"></div>
+            </td>
+            <td>
+                <p>12</p>
+                <div id="12"></div>
+            </td>
+            <td>
+                <p>13</p>
+                <div id="13"></div>
+            </td>
         </tr>
         <tr class="tr3">
-            <td>15</td>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-            <td>20</td>
-            <td>21</td>
+            <td>
+                <p>14</p>
+                <div id="14"></div>
+            </td>
+            <td>
+                <p>15</p>
+                <div id="15"></div>
+            </td>
+            <td>
+                <p>16</p>
+                <div id="16"></div>
+            </td>
+            <td>
+                <p>17</p>
+                <div id="17"></div>
+            </td>
+            <td>
+                <p>18</p>
+                <div id="18"></div>
+            </td>
+            <td>
+                <p>19</p>
+                <div id="19"></div>
+            </td>
+            <td>
+                <p>20</p>
+                <div id="20"></div>
+            </td>
         </tr>
         <tr class="tr4">
-            <td>22</td>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
+            <td>
+                <p>21</p>
+                <div id="21"></div>
+            </td>
+            <td>
+                <p>22</p>
+                <div id="22"></div>
+            </td>
+            <td>
+                <p>23</p>
+                <div id="23"></div>
+            </td>
+            <td>
+                <p>24</p>
+                <div id="24"></div>
+            </td>
+            <td>
+                <p>25</p>
+                <div id="25"></div>
+            </td>
+            <td>
+                <p>26</p>
+                <div id="26"></div>
+            </td>
+            <td>
+                <p>27</p>
+                <div id="27"></div>
+            </td>
         </tr>
         <tr class="tr5">
-            <td>29</td>
-            <td>30</td>
-            <td>31</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <p>28</p>
+                <div id="28"></div>
+            </td>
+            <td>
+                <p>29</p>
+                <div id="29"></div>
+            </td>
+            <td>
+                <p>30</p>
+                <div id="30"></div>
+            </td>
+            <td>
+                <p>31</p>
+                <div id="31"></div>
+            </td>
+            <td>
+                <p></p>
+                <div></div>
+            </td>
+            <td>
+                <p></p>
+                <div></div>
+            </td>
+            <td>
+                <p></p>
+                <div></div>
+            </td>
         </tr>
 
     </table>
-    <button class="btn btn-secondary" id="myBtn">Add Event</button>
+    <button class="add btn btn-primary" id="myBtn">Add Event</button>
 
-<script src="../node_modules/jquery/dist/jquery.js"></script>
 
+
+<script src="jquery/dist/jquery.js"></script>
 <script src="main.js"></script>
+
 </body>
+
+
 </html>
