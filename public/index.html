@@ -46,7 +46,7 @@
     <!-- </head> -->
 
     <!-- <body> -->
-    <h1 id="month" class="text-center">Month</h1>
+    <div id="month" class="text-center"></div>
 
 
     <table class="calender">
@@ -84,6 +84,7 @@
             </td>
             <td>
                 <p>5</p>
+
                 <div  class="dim" id="5"></div>
             </td>
             <td>
@@ -98,7 +99,9 @@
         <tr class="tr2">
             <td>
                 <p>8</p>
+
                 <div  class="dim" id="8"></div>
+
             </td>
             <td>
                 <p>9</p>
@@ -218,6 +221,14 @@
 
     </table>
     <button class="add btn btn-primary" id="myBtn">Add Event</button>
+
+    <script id='event-template' type="text/x-handlebars-template">
+        <p>{{title}}</p>
+    </script>
+
+    <script id='header-template' type="text/x-handlebars-template">
+        <h1>{{name}}</h1>
+    </script>
 
 
 

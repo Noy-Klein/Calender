@@ -19,7 +19,17 @@ class EventsHandler {
     registerAddEvent() {
         const model = $("#mymodel");
         const button = $("#mybtn");
-        const span = $("")
+        button.on('click', function(){
+            model.css('display', 'none');
+        })
+    }
+
+    close(){
+        const model = $("#mymodel");
+        const span = $('.close')[0];
+        span.on('click', function(){
+            model.css('dispaly', 'none');
+        })
     }
 
     addEventDetails() {
@@ -55,10 +65,14 @@ class EventsHandler {
     //     model.style.display = "block";
     // }
 
+
+
     // When the user clicks on <span> (x), close the model
     // span.onclick = function() {
     //     model.style.display = "none";
     // }
+
+
 
     // // When the user clicks anywhere outside of the model, close it
     // window.onclick = function(event) {
@@ -66,17 +80,14 @@ class EventsHandler {
     //         model.style.display = "none";
     //     }
     // }
-    showDayEvents() {
-        $("").on('click', function() {
+    // showDayEvents() {
+    //     $("").on('click', function() {
 
-        })
-    }
+    //     })
+    // }
 
-    showSpecialEvents() {
-        $("").on('click', function(){
-
-        })
-    }
+    // showSpecialEvents() {
+    //     $("").on('click', function(){
 
 }
 export default EventsHandler;
