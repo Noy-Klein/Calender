@@ -1,7 +1,7 @@
 class EventsHandler {
-    constructor(eventsRepository, eventsHandler) {
+    constructor(eventsRepository, eventsRenderer) {
         this.eventsRepository = eventsRepository;
-        this.eventsHandler = eventsHandler;
+        this.eventsRenderer = eventsRenderer;
         //inputs here
     }
 }
