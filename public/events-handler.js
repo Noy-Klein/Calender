@@ -5,6 +5,14 @@ class EventsHandler {
         //inputs here
     }
 
+    showForm(){
+        var modal = $('#mymodel');
+        var btn = $('#myBtn');
+        btn.on('click', function(){
+            
+        })
+    }
+
     nextMonth(){
         
     }
