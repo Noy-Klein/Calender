@@ -2,7 +2,6 @@ class EventsHandler {
     constructor(eventsRepository, eventsRenderer) {
         this.eventsRepository = eventsRepository;
         this.eventsRenderer = eventsRenderer;
-        //inputs here
     }
 
     nextMonth() {
@@ -17,21 +16,28 @@ class EventsHandler {
         })
     }
 
-    addEvent() {
+    registerAddEvent() {
         const model = $("#mymodel");
         const button = $("#mybtn");
         const span = $("")
     }
 
     addEventDetails() {
-        $('').on("click", function () {
-            let title = $("").val();
-            let day = $("").val();
-            let month = $("").val();
-            let year = $("").val();
-            let time = $("").val();
-            let location = $("").val();
-            let image = $("").val();
+        $('.submit').on("click", function () {
+            let title = $(".title").val();
+            let day = $(".day").val();
+            let month = $(".month").val();
+            let year = $(".Year").val();
+            let time = $("time").val();
+            let location = $("location").val();
+            let image = $(".image").val();
+            if(title === "") {alert("Please enter title")}
+            if(day === "") {alert("Please enter day")}
+            if(month === "") {alert("Please enter month")}
+            if(year === "") {alert("Please enter year")}
+            this.eventsRepository.addEvent(title, day, month, year, time, location, image).then(()=> {
+                this.eventsRepository.renderEvents(this.eventsRepository.events)
+            })
         })
 
     }
@@ -72,7 +78,7 @@ class EventsHandler {
         })
     }
 
-
+}
 export default EventsHandler;
 
 var dateControl = document.querySelector('input[type="date"]');
