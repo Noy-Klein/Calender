@@ -57,6 +57,13 @@ class EventsHandler {
                         const model = $("#mymodel");
                         model.css('display', 'none');
                     })
+                    $(".title").val('');
+                    $(".day").val('');
+                    $(".month").val('');
+                    $(".Year").val('');
+                    $(".time").val('');
+                    $(".location").val('');
+                    $(".image").val('');
             }
 
         })
