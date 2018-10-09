@@ -2,20 +2,73 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap\dist\css\bootstrap.css" />
+
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="font-awesome-5-css\css\fontawesome-all.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+
+</head>
+    <body>
+        <div class="col-sm-6">
+            <div class="calendar-section">
+              <div id='calendar'></div>
+            </div> 
+          </div>
+          
+          <div class="col-sm-6">
+            <div class="event-description-section">
+              <table class="table order-details-table">
+                <tbody id="insert_here">
+                </tbody>
+              </table>
+            </div>
+          </div>
+    <h2 class="text-center">Add Event</h2>
+    <br>
+    
+    <!-- Trigger/Open The Modal -->
+    <button class="btn btn-primary" id="myBtn">Add Event</button>
+    <br>
+    <br>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+    <input type= "add-title" placeholder="Title">
+    <br>
+    <br>
+    
+    <input type= "add-date" placeholder="Date">
+    <br>
+    <br>
+    
+    <input type= "add-time" placeholder="Time">
+    <br>
+    <br>
+    
+    <input type= "add-image" placeholder="Image">
+    <br>
+    <br>
+    
+    <input type= "add-location" placeholder="Location">
+    <br>
+    <br>
+    <button class="btn btn-primary">Add</button>
+      </div>
+    
+    </div>
+    
 </head>
 
 <body>
     <table>
         <tr>
-            <button type="button">Before</button>
-            <th>Month</th>
-            <button type="button">Next</button>
+            <button class="btn btn-primary" type="button">Before</button>
+            <th id="month" class="text-center">Month</th>
+            <button id="next"class="btn btn-primary" type="button">Next</button>
         </tr>
         <tr>
             <th>Sunday</th>
@@ -74,5 +127,6 @@
 
     </table>
 </body>
-
+<script src="main.js"></script>
+<script src="jquery\dist\jquery.js"></script>
 </html>
