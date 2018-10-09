@@ -56,7 +56,8 @@ window.onclick = function(event) {
     showSpecialEvents(){
 
     }
-}
 
 export default EventsHandler;
 
+var dateControl = document.querySelector('input[type="date"]');
+dateControl.value = '2018-06-01';

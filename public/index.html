@@ -34,13 +34,14 @@
     <div id="myModal" class="modal">
     
       <!-- Modal content -->
-      <div class="modal-content">
+      <div class="text-center" class="modal-content">
         <span class="close">&times;</span>
+        <h3 id="h3">Your Event Details:</h3>
     <input type= "add-title" placeholder="Title">
     <br>
     <br>
     
-    <input type= "add-date" placeholder="Date">
+    <input id="date" type="date" value="2017-06-01">
     <br>
     <br>
     
@@ -55,7 +56,7 @@
     <input type= "add-location" placeholder="Location">
     <br>
     <br>
-    <button class="btn btn-primary">Add</button>
+    <button class="btn btn-secondary">Add</button>
       </div>
     
     </div>
@@ -65,23 +66,23 @@
 <body>
         <h1 id="month" class="text-center">Month</h1>
 
-    <table>
-            <button id="before" class="btn btn-primary" type="button">Before</button>
-            <button id="next"class="btn btn-primary" type="button">Next</button>
+    <table class="calender">
+            <button id="before" class="btn btn-secondary" type="button">Before</button>
+            <button id="next"class="btn btn-secondary" type="button">Next</button>
     
         
 
         <tr>
-            <th>Sunday</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
+            <th class="text-center">Sunday</th>
+            <th class="text-center">Monday</th>
+            <th class="text-center">Tuesday</th>
+            <th class="text-center">Wednesday</th>
+            <th class="text-center">Thursday</th>
+            <th class="text-center">Friday</th>
+            <th class="text-center">Saturday</th>
         </tr>
-        <tr>
-            <td>1</td>
+        <tr class="tr1">
+            <td class="td1">1</td>
             <td>2</td>
             <td>3</td>
             <td>4</td>
@@ -89,7 +90,7 @@
             <td>6</td>
             <td>7</td>
         </tr>
-        <tr>
+        <tr class="tr2">
             <td>8</td>
             <td>9</td>
             <td>10</td>
@@ -98,7 +99,7 @@
             <td>13</td>
             <td>14</td>
         </tr>
-        <tr>
+        <tr class="tr3">
             <td>15</td>
             <td>16</td>
             <td>17</td>
@@ -107,7 +108,7 @@
             <td>20</td>
             <td>21</td>
         </tr>
-        <tr>
+        <tr class="tr4">
             <td>22</td>
             <td>23</td>
             <td>24</td>
@@ -116,7 +117,7 @@
             <td>27</td>
             <td>28</td>
         </tr>
-        <tr>
+        <tr class="tr5">
             <td>29</td>
             <td>30</td>
             <td>31</td>
@@ -127,7 +128,7 @@
         </tr>
 
     </table>
-    <button class="btn btn-primary" id="myBtn">Add Event</button>
+    <button class="btn btn-secondary" id="myBtn">Add Event</button>
 
 <script src="../node_modules/jquery/dist/jquery.js"></script>
 
