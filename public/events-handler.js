@@ -110,5 +110,19 @@ class EventsHandler {
 }
 export default EventsHandler;
 
+
 // var dateControl = document.querySelector('input[type="date"]');
 // dateControl.value = '2018-06-01';
+
+// var calendar = new Y.Calendar({
+//     contentBox: "#mycalendar",
+//     width:'100%',
+//     showPrevMonth: true,
+//     showNextMonth: true,
+//     date: new Date()}).render();
+
+
+//       $("#1 tr1").click(function(){
+//         window.location = "example.html";
+//       });
+
