@@ -2,7 +2,6 @@ class EventsRepository {
     constructor() {
         this.events = [];
     }
-
     getEvent() {
         return $.get('/events').then((data)=> {
             this.events = data;
