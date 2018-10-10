@@ -207,11 +207,11 @@ transition: all .2s ease-in-out; }
 }
 .day{
     border-radius: 5px;
-
+    cursor: pointer;
 }
 .month{
     border-radius: 5px;
-
+    cursor: pointer;
 }.year{
     border-radius: 5px;
 
@@ -274,6 +274,7 @@ img{
     width: 20px;
     height: 20px;
     float: right;
+    cursor: pointer;
 }
 
 .add{

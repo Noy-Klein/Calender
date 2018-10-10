@@ -5,14 +5,11 @@ class EventsRepository {
     }
 
     getHolidays() {
-        $.ajax({
-            method: 'GET',
-            url: 'https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=off&mod=on&nx=off&year=now&month=x&ss=off&mf=off&c=off&geo=none&geonameid=3448439&m=50&s=off',
-            success: function(data) {
+        const url = 'https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=off&mod=on&nx=off&year=now&month=x&ss=off&mf=off&c=off&geo=none&geonameid=3448439&m=50&s=off';
+        return $.get(url).then((data)=> {
                 this.holidays = data.items;
-                // console.log(this.holidays);
             }
-        })
+        )
     }
 
     getMonth() {
@@ -43,7 +40,7 @@ class EventsRepository {
             if(err) {throw err}
         })
     }
-    // year,
+
     addEvent(title, day, month, time, location, image) {
         let event = {
             title: title,
@@ -56,7 +53,6 @@ class EventsRepository {
         }
         return $.post('/events', event).then((data)=> {
             this.events.push(data);
-            // console.log(data);
         })
     }
 }
