@@ -11,8 +11,7 @@ class EventsHandler {
     }
 
     nextMonth() {
-        $("").on('click', function () {
-
+        $("").on('click', function () { //this.eventsRenderer.renderMonth(this.eventsRepository.getMonth());
 
         })
     }
@@ -20,6 +19,10 @@ class EventsHandler {
         $("").on('click', function () {
 
         })
+    }
+
+    onLoadMonth(){
+        this.eventsRenderer.renderMonth(this.eventsRepository.getMonth());
     }
 
     registerAddEvent() {
@@ -42,28 +45,35 @@ class EventsHandler {
         $('.submit').on("click", () => {
             let title = $(".title").val();
             let day = $(".day").val();
-            let month = $(".month").val();
+            let month = $('.model-content').find('.month').val();
+            console.log(month);
             let year = $(".Year").val();
             let time = $(".time").val();
             let location = $(".location").val();
             let image = $(".image").val();
-            if (title === "") { alert("Please enter title") }
-            if (day === "") { alert("Please enter day") }
-            if (month === "") { alert("Please enter month") }
-            if (year === "") { alert("Please enter year") }
+            if(title == '' || day== '' || month == '' || year == ''){
+                if (title === "") { alert("Please enter title") }
+                if (day == "") { alert("Please enter day") }
+                if (month == "") { alert("Please enter month") }
+                if (year == "") { alert("Please enter year") }
+            }
             else {
+                title = $(".title").val();
+                day = $(".day").val();
+                month = $('.model-content').find('.month').val();
+                year = $(".Year").val();
                 this.eventsRepository.addEvent(title, day, month, year, time, location, image).then(() => {
                     this.eventsRenderer.renderEvents(this.eventsRepository.events);
-                        const model = $("#mymodel");
-                        model.css('display', 'none');
-                    })
-                    $(".title").val('');
-                    $(".day").val('');
-                    $(".month").val('');
-                    $(".Year").val('');
-                    $(".time").val('');
-                    $(".location").val('');
-                    $(".image").val('');
+                    const model = $("#mymodel");
+                    model.css('display', 'none');
+                })
+                $(".title").val('');
+                $(".day").val('');
+                $(".month").val('');
+                $(".Year").val('');
+                $(".time").val('');
+                $(".location").val('');
+                $(".image").val('');
             }
 
         })
