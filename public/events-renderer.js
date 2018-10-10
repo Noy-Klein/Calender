@@ -6,6 +6,13 @@ class EventsRenderer {
         { name: 'November 2018', num: 11 }, { name: 'December 2018', num: 12 }];
     }
 
+    renderHolidays(holidays) {
+        //for loop holidays
+        for (let h in holidays) {
+            
+        }
+    }
+
     renderEvents(events, cm) {
         let monthNum;
         for (let m in this.months) {

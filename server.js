@@ -37,6 +37,14 @@ app.post('/events', function(req, res) {
     })
 });
 
+app.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=off&mod=on&nx=off&year=now&month=x&ss=off&mf=off&c=off&geo=none&geonameid=3448439&m=50&s=off', function(err, data) {
+    if (err) {
+        console.err(err)
+        res.status(500).send(err)
+    } else {
+        res.send(data)
+        console.log(data)
+    }
 app.delete('/events/:id', function(req,res){
     let id = req.params.id;
     event.findByIdAndRemove(id).exec(function(err, data){

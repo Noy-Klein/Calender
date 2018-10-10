@@ -14,7 +14,9 @@ eventsHandler.registerAddEvent();
 eventsHandler.close();
 eventsHandler.addEventDetails();
 eventsHandler.modalClick();
+eventsRepository.getHolidays();
 eventsHandler.delete();
+
 
 
 
