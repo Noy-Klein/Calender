@@ -7,11 +7,9 @@ class EventsRenderer {
     }
 
     renderEvents(events, cm) {
-        // console.log(events);//works
-        // $('.dim').empty(); // מה שבסוגריים  אמור להיות הדיב או הרשימה שבה יהיה האיבנטים - תגית כללית או קלאס כללי לכל רשימת איבנטים בתאים, ויהיו גם איידי לכל רשימת איבנטים לפי היום בחודש
         let monthNum;
         for (let m in this.months) {
-            if (cm == this.months[m].num) { //מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+            if (cm == this.months[m].num) { 
                 monthNum = this.months[m].num;
             }
         }
@@ -31,6 +29,7 @@ class EventsRenderer {
             }
         }
     }
+
 
 
     renderModel(events, cm, id){
@@ -58,8 +57,8 @@ class EventsRenderer {
         $('.header').empty()
         let source = $('#header-template').html();
         let template = Handlebars.compile(source);
-        let newHTML = template(this.months[i]); // בהנדל ברס אני צריכה רק לכתוב {{name}}
-        $('.header').append(newHTML);// מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+        let newHTML = template(this.months[i]); 
+        $('.header').append(newHTML);
     }
 }
 
