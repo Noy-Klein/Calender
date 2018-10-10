@@ -2,34 +2,41 @@ class EventsHandler {
     constructor(eventsRepository, eventsRenderer) {
         this.eventsRepository = eventsRepository;
         this.eventsRenderer = eventsRenderer;
-        this.nm = this.eventsRepository.getMonth();
+        this.cm = this.eventsRepository.getMonth();
     }
 
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
-        this.eventsRenderer.renderEvents(this.eventsRepository.events)
+            this.eventsRenderer.renderEvents(this.eventsRepository.events)
         })
     }
 
     nextMonth() {
-        $("#next").on('click', ()=> {
-        if(this.nm == 11) {
+        $("#next").on('click', () => {
+            this.eventsRenderer.renderMonth(this.cm + 1)
+            this.cm++
+            console.log(this.cm)
             const nextButton = $('#next')
-            nextButton.css('display', 'none');
-            return;
-        }
-        this.eventsRenderer.renderMonth(this.nm +1)
-        this.nm++
-        console.log(this.nm)
+            const previousButton = $('#previous')
+            if (this.cm == 11) {nextButton.css('display', 'none')}
+            if (this.cm == 10) {nextButton.css('display', 'block')}
+            if (this.cm == 1) {previousButton.css('display', 'block')}
         })
     }
     previousMonth() {
-        $("#Previous").on('click', ()=> {
-        this.eventsRenderer.renderMonth(this.eventsRepository.getMonth() -1)
+        $("#previous").on('click', () => {
+            this.eventsRenderer.renderMonth(this.cm - 1)
+            this.cm--
+            console.log(this.cm)
+            const nextButton = $('#next')
+            const previousButton = $('#previous')
+            if (this.cm == 1 ) {previousButton.css('display', 'block')}
+            if (this.cm == 0) {previousButton.css('display', 'none')}
+            if (this.cm == 10) {nextButton.css('display', 'block')}
         })
     }
 
-    onLoadMonth(){
+    onLoadMonth() {
         this.eventsRenderer.renderMonth(this.eventsRepository.getMonth());
     }
 
@@ -59,7 +66,7 @@ class EventsHandler {
             let time = $(".time").val();
             let location = $(".location").val();
             let image = $(".image").val();
-            if(title == '' || day== '' || month == '' || year == ''){
+            if (title == '' || day == '' || month == '' || year == '') {
                 if (title == "") { alert("Please enter title") }
                 if (day == "") { alert("Please enter day") }
                 if (month == "") { alert("Please enter month") }
