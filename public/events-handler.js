@@ -12,8 +12,7 @@ class EventsHandler {
 
     nextMonth() {
         $("").on('click', function () {
-
-
+            
         })
     }
     previousMonth() {
@@ -47,10 +46,10 @@ class EventsHandler {
             let time = $(".time").val();
             let location = $(".location").val();
             let image = $(".image").val();
-            if (title === "") { alert("Please enter title") }
-            if (day === "") { alert("Please enter day") }
-            if (month === "") { alert("Please enter month") }
-            if (year === "") { alert("Please enter year") }
+            if (title == "") { alert("Please enter title") }
+            if (day == "") { alert("Please enter day") }
+            if (month == "") { alert("Please enter month") }
+            if (year == "") { alert("Please enter year") }
             else {
                 this.eventsRepository.addEvent(title, day, month, year, time, location, image).then(() => {
                     this.eventsRenderer.renderEvents(this.eventsRepository.events);
