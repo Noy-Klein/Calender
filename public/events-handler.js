@@ -13,6 +13,7 @@ class EventsHandler {
 
     nextMonth() {
         $("#next").on('click', () => {
+
             this.eventsRenderer.renderMonth(this.cm + 1)
             this.cm++
             console.log(this.cm)
@@ -33,6 +34,7 @@ class EventsHandler {
             if (this.cm == 1 ) {previousButton.css('display', 'block')}
             if (this.cm == 0) {previousButton.css('display', 'none')}
             if (this.cm == 10) {nextButton.css('display', 'block')}
+
         })
     }
 
