@@ -18,6 +18,21 @@ class EventsHandler {
         })
     }
 
+    delete(){
+        $('.modal-body').on('click', '.delete',(event)=>{
+            let ID = $(event.currentTarget).closest('li').data('id');
+            console.log(ID);
+            this.eventsRepository.deleteEvent(ID).then(()=>{
+                this.eventsRenderer.renderModel(this.eventsRepository.events, this.cm, ID);
+            }).then(()=>{
+                this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
+            }).then(()=>{
+                $('.modal-body').find('p').css('font-weight', 'bold')
+                $('.modal-body').find('p').append('DELETED!')
+            })
+        })
+    }
+
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
@@ -76,7 +91,7 @@ class EventsHandler {
             let title = $(".title").val();
             let day = $(".day").val();
             let month = $('.model-content').find('.month').val();
-            console.log(month);
+            // console.log(month);
             let time = $(".time").val();
             let location = $(".location").val();
             let image = $(".image").val();

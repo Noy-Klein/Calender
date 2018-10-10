@@ -20,6 +20,7 @@
     <br>
     <br>
     <h1 class="header"></h1>
+    
     <br>
     <br>
     <!-- The model -->
@@ -107,8 +108,8 @@
         
         
         <button id="previous" class="btn btn-secondary" type="button">Previous</button>
-        <button id="next" class="btn btn-secondary" type="button">Next</button>
-
+        <button id="next" class="btn btn-secondary" type="button">Next</button><br>
+        <button class="add btn btn-primary" id="myBtn">Add Event</button>
         <tr>
             <th class="text-center">Sunday</th>
             <th class="text-center">Monday</th>
@@ -282,7 +283,7 @@
         </tr>
 
     </table>
-    <button class="add btn btn-primary" id="myBtn">Add Event</button>
+    
     <script id='event-template' type="text/x-handlebars-template">
         <p>{{title}}</p>
     </script>
@@ -293,7 +294,7 @@
 
     <script id='modal-template' type="text/x-handlebars-template">
         <ul>
-        <li>{{title}} - {{day}}.{{month}}.2018 - {{time}} At {{location}} </li>
+        <li data-id="{{_id}}">{{title}} - {{day}}.{{month}}.2018 - {{time}} At {{location}}<span><img class="delete" src="https://photos2.fotosearch.com/bthumb/CSP/CSP534/grey-garbage-can-on-white-background-stock-illustration__k5348776.jpg"></span> </li>
         <img src="{{image}}">
         <br>
         <br>
