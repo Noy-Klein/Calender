@@ -7,29 +7,29 @@ class EventsHandler {
 
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
-        this.eventsRenderer.renderEvents(this.eventsRepository.events)
+            this.eventsRenderer.renderEvents(this.eventsRepository.events)
         })
     }
 
     nextMonth() {
-        $("#next").on('click', ()=> {
-        if(this.nm == 11) {
-            const nextButton = $('#next')
-            nextButton.css('display', 'none');
-            return;
-        }
-        this.eventsRenderer.renderMonth(this.nm +1)
-        this.nm++
-        console.log(this.nm)
+        $("#next").on('click', () => {
+            this.eventsRenderer.renderMonth(this.nm + 1)
+            this.nm++
+            console.log(this.nm)
+            if (this.nm == 11) {
+                const nextButton = $('#next')
+                nextButton.css('display', 'none');
+                return;
+            }
         })
     }
     previousMonth() {
-        $("#Previous").on('click', ()=> {
-        this.eventsRenderer.renderMonth(this.eventsRepository.getMonth() -1)
+        $("#Previous").on('click', () => {
+            this.eventsRenderer.renderMonth(this.eventsRepository.getMonth() - 1)
         })
     }
 
-    onLoadMonth(){
+    onLoadMonth() {
         this.eventsRenderer.renderMonth(this.eventsRepository.getMonth());
     }
 
@@ -59,7 +59,7 @@ class EventsHandler {
             let time = $(".time").val();
             let location = $(".location").val();
             let image = $(".image").val();
-            if(title == '' || day== '' || month == '' || year == ''){
+            if (title == '' || day == '' || month == '' || year == '') {
                 if (title == "") { alert("Please enter title") }
                 if (day == "") { alert("Please enter day") }
                 if (month == "") { alert("Please enter month") }

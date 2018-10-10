@@ -6,13 +6,12 @@ class EventsRenderer {
         { name: 'November 2018', num: 11 }, { name: 'December 2018', num: 12 }];
     }
 
-    renderEvents(events) {
+    renderEvents(events, cm) {
         // console.log(events);//works
         // $('.dim').empty(); // מה שבסוגריים  אמור להיות הדיב או הרשימה שבה יהיה האיבנטים - תגית כללית או קלאס כללי לכל רשימת איבנטים בתאים, ויהיו גם איידי לכל רשימת איבנטים לפי היום בחודש
         let monthNum;
-        console.log($('.header').val());
         for (let m in this.months) {
-            if ($('.header').val() == this.months[m].name) { //מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+            if (cm == this.months[m].num) { //מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
                 monthNum = this.months[m].num;
             }
         }
