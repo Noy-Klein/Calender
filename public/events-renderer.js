@@ -7,26 +7,46 @@ class EventsRenderer {
     }
 
     renderEvents(events, cm) {
-        // console.log(events);//works
-        // $('.dim').empty(); // מה שבסוגריים  אמור להיות הדיב או הרשימה שבה יהיה האיבנטים - תגית כללית או קלאס כללי לכל רשימת איבנטים בתאים, ויהיו גם איידי לכל רשימת איבנטים לפי היום בחודש
         let monthNum;
         for (let m in this.months) {
-            if (cm == this.months[m].num) { //מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+            if (cm == this.months[m].num) { 
                 monthNum = this.months[m].num;
             }
         }
-        console.log(monthNum);
-        //doesnt even enter this for loop -
-        for (let e in events) {
-            if (events[e].month == monthNum) {
-                console.log(events[e].month);
+        $('.dim').empty();
+        // $('.model-body').find('p').append('fine')
+        for (let e of events) {
+            if (e.month == cm + 1) {
                 for (let i = 1; i < 32; i++) {
-                    let source = $('#event-template').html();
-                    let template = Handlebars.compile(source);
-                    let newHTML = template(events[e]);
-                    $('#1').append(newHTML);
-                    // $('#'+i).append(newHTML); //מה שבסוגריים זה האיידי של התא בטבלה ששווה ל(i)
+                    if (e.day == i) {
+                        let source = $('#event-template').html();
+                        let template = Handlebars.compile(source);
+                        let newHTML = template(e);
+                        $('#' + i + '').append(newHTML);
+                        
+                    }
                 }
+            }
+        }
+    }
+
+
+
+    renderModel(events, cm, id){
+        console.log('entered');
+        $('.modal-body').find('p').empty();
+        for (let e of events) {
+            if (e.month == cm + 1) {
+                // for (let i = 1; i < 32; i++) {
+                    if (e.day == id) {
+                        // $('.modal-body').find('p').empty();
+                        let source = $('#modal-template').html();
+                        let template = Handlebars.compile(source);
+                        let newHTML = template(e);
+                        $('.modal-body').find('p').append(newHTML);
+                        console.log(newHTML);
+                    }
+                // }
             }
         }
     }
@@ -37,8 +57,8 @@ class EventsRenderer {
         $('.header').empty()
         let source = $('#header-template').html();
         let template = Handlebars.compile(source);
-        let newHTML = template(this.months[i]); // בהנדל ברס אני צריכה רק לכתוב {{name}}
-        $('.header').append(newHTML);// מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+        let newHTML = template(this.months[i]); 
+        $('.header').append(newHTML);
     }
 }
 
