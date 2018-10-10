@@ -280,7 +280,17 @@
         <h1>{{name}}</h1>
     </script>
 
+    <script id='modal-template' type="text/x-handlebars-template">
+        <ul>
+        <li>{{title}} - {{day}}.{{month}}.2018 - {{time}} At {{location}} </li>
+        <img src="{{image}}">
+        <br>
+        <br>
+    </ul>
+    </script>
+
     <div class="container">
+
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">

@@ -5,6 +5,19 @@ class EventsHandler {
         this.cm = this.eventsRepository.getMonth();
     }
 
+    modalClick(){
+        $('body').on('click','td',(event)=>{
+            // console.log(event.target.id)
+            let id = parseInt($(event.target).find('p').text());
+            console.log(id);
+            if(id==''){
+                id = $(event.target).text();
+                console.log(id);
+            }
+            this.eventsRenderer.renderModel(this.eventsRepository.events, this.cm, id);
+        })
+    }
+
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);

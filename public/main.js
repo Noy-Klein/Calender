@@ -13,6 +13,7 @@ eventsHandler.onLoadMonth();
 eventsHandler.registerAddEvent();
 eventsHandler.close();
 eventsHandler.addEventDetails();
+eventsHandler.modalClick();
 
 
 

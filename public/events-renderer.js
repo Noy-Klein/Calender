@@ -14,7 +14,7 @@ class EventsRenderer {
             }
         }
         $('.dim').empty();
-        $('.model-body').find('p').append('fine')
+        // $('.model-body').find('p').append('fine')
         for (let e of events) {
             if (e.month == cm + 1) {
                 for (let i = 1; i < 32; i++) {
@@ -23,11 +23,35 @@ class EventsRenderer {
                         let template = Handlebars.compile(source);
                         let newHTML = template(e);
                         $('#' + i + '').append(newHTML);
+                        
                     }
                 }
             }
         }
     }
+
+
+
+    renderModel(events, cm, id){
+        console.log('entered');
+        $('.modal-body').find('p').empty();
+        for (let e of events) {
+            if (e.month == cm + 1) {
+                // for (let i = 1; i < 32; i++) {
+                    if (e.day == id) {
+                        // $('.modal-body').find('p').empty();
+                        let source = $('#modal-template').html();
+                        let template = Handlebars.compile(source);
+                        let newHTML = template(e);
+                        $('.modal-body').find('p').append(newHTML);
+                        console.log(newHTML);
+                    }
+                // }
+            }
+        }
+    }
+
+    //works:
 
     renderMonth(i) {
         $('.header').empty()
