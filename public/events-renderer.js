@@ -7,24 +7,32 @@ class EventsRenderer {
     }
 
     renderEvents(events) {
-        $('.dim').empty(); // מה שבסוגריים  אמור להיות הדיב או הרשימה שבה יהיה האיבנטים - תגית כללית או קלאס כללי לכל רשימת איבנטים בתאים, ויהיו גם איידי לכל רשימת איבנטים לפי היום בחודש
-        let monthNum = 0;
+        // console.log(events);//works
+        // $('.dim').empty(); // מה שבסוגריים  אמור להיות הדיב או הרשימה שבה יהיה האיבנטים - תגית כללית או קלאס כללי לכל רשימת איבנטים בתאים, ויהיו גם איידי לכל רשימת איבנטים לפי היום בחודש
+        let monthNum;
+        console.log($('.header').val());
         for (let m in this.months) {
-            if ($('#month').val() == this.months[m].name) { //מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+            if ($('.header').val() == this.months[m].name) { //מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
                 monthNum = this.months[m].num;
             }
         }
+        console.log(monthNum);
+        //doesnt even enter this for loop -
         for (let e in events) {
             if (events[e].month == monthNum) {
-                for (let i = 0; i < 31; i++) {
+                console.log(events[e].month);
+                for (let i = 1; i < 32; i++) {
                     let source = $('#event-template').html();
                     let template = Handlebars.compile(source);
                     let newHTML = template(events[e]);
-                    $('#'+i).append(newHTML); //מה שבסוגריים זה האיידי של התא בטבלה ששווה ל(i)
+                    $('#1').append(newHTML);
+                    // $('#'+i).append(newHTML); //מה שבסוגריים זה האיידי של התא בטבלה ששווה ל(i)
                 }
             }
         }
     }
+
+    //works:
 
     renderMonth(i) {
         let source = $('#header-template').html();
