@@ -37,6 +37,15 @@ app.post('/events', function(req, res) {
     })
 });
 
+app.delete('/events/:id', function(req,res){
+    let id = req.params.id;
+    event.findByIdAndRemove(id).exec(function(err, data){
+        if(err){res.status(500).send(err)}
+        res.send(data);
+        console.log('deleted!')
+    })
+})
+
 app.listen(SERVER_PORT, () => {
     console.log("Server started on port " + SERVER_PORT);
 });
