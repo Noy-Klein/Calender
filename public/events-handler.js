@@ -7,13 +7,12 @@ class EventsHandler {
 
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
-            this.eventsRenderer.renderEvents(this.eventsRepository.events)
+            this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
         })
     }
 
     nextMonth() {
         $("#next").on('click', () => {
-
             this.eventsRenderer.renderMonth(this.cm + 1)
             this.cm++
             console.log(this.cm)
@@ -22,6 +21,7 @@ class EventsHandler {
             if (this.cm == 11) {nextButton.css('display', 'none')}
             if (this.cm == 10) {nextButton.css('display', 'block')}
             if (this.cm == 1) {previousButton.css('display', 'block')}
+            this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
         })
     }
     previousMonth() {
@@ -34,7 +34,7 @@ class EventsHandler {
             if (this.cm == 1 ) {previousButton.css('display', 'block')}
             if (this.cm == 0) {previousButton.css('display', 'none')}
             if (this.cm == 10) {nextButton.css('display', 'block')}
-
+            this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
         })
     }
 
@@ -79,7 +79,7 @@ class EventsHandler {
                 month = $('.model-content').find('.month').val();
                 year = $(".Year").val();
                 this.eventsRepository.addEvent(title, day, month, year, time, location, image).then(() => {
-                    this.eventsRenderer.renderEvents(this.eventsRepository.events);
+                    this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
                     const model = $("#mymodel");
                     model.css('display', 'none');
                 })
