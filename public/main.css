@@ -20,8 +20,6 @@ max-height: 600px;
     margin: 0 auto;
 }
 
-
-
 td{
     width:2px;
 }
@@ -80,7 +78,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
         /* float: left; */
         margin-left: 1%;
         display: inline-block;
-        /* margin-top: 40px; */
         border: none;
         
     }
@@ -94,8 +91,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         margin-bottom: 50px;
     }
     #myBtn{
-        /* margin-left: 1200px; */
-        /* margin-bottom: 50px; */
+
     }
     
 body{
@@ -107,6 +103,7 @@ body{
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 td{
+
     max-width: 14%;
 }
 .tr1{
@@ -238,15 +235,32 @@ transition: all .2s ease-in-out; }
     display: inline-block;
 }
 
+td{
+    box-sizing: border-box;
+    
+}
+
 #number{
     margin-top: -40px;
     font-family: fantasy;
+    float: left;
+    position: absolute;
 }
 
 img{
     height: 100px;
     width: 100px;
     border: 1px, solid, black;
+}
+
+
+#demo{
+    display: inline;
+    position: absolute;
+}
+.num1{
+    border: 1px solid black;
+
 }
 
 .dim p{
@@ -271,4 +285,5 @@ img{
 h1{
     margin-top: 0;
 }
+
 
