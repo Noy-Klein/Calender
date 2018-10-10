@@ -2,6 +2,14 @@ class EventsRepository {
     constructor() {
         this.events = [];
     }
+
+    getMonth(){
+        let now = new Date();
+        let m = now.getMonth();
+        m = m++;
+        return m;
+    }
+
     getEvents() {
         return $.get('/events').then((data)=> {
             this.events = data;

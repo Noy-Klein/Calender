@@ -30,7 +30,7 @@ class EventsRenderer {
         let source = $('#header-template').html();
         let template = Handlebars.compile(source);
         let newHTML = template(this.months[i]); // בהנדל ברס אני צריכה רק לכתוב {{name}}
-        $('').append(newHTML);// מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
+        $('.header').append(newHTML);// מה שבסוגריים זה קישור לתגית של הכותרת של החודש בו הלוח שנה נמצא April 2018 לדוגמא
     }
 }
 
