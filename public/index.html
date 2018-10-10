@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="font-awesome/css/font-awesome.css" />
+
 </head>
 
 
@@ -51,7 +52,7 @@
 
 
     <table class="calender">
-        <button id="before" class="btn btn-secondary" type="button">Before</button>
+        <button id="Previous" class="btn btn-secondary" type="button">Previous</button>
         <button id="next" class="btn btn-secondary" type="button">Next</button>
 
 
@@ -111,13 +112,9 @@
                 <p>9</p>
                 <div class="dim" id="9"></div>
             </td>
-            <td>
+            <td data-toggle="modal" data-target="#myModal">
                 <p>10</p>
                 <div class="dim" id="10"></div>
-            </td>
-            <td>
-                <p>1</p>
-                <div class="dim" id="1"></div>
             </td>
             <td>
                 <p>11</p>
@@ -131,12 +128,13 @@
                 <p>13</p>
                 <div class="dim" id="13"></div>
             </td>
-        </tr>
-        <tr class="tr3">
             <td>
                 <p>14</p>
                 <div class="dim" id="14"></div>
             </td>
+        </tr>
+        <tr class="tr3">
+            
             <td>
                 <p>15</p>
                 <div class="dim" id="15"></div>
@@ -161,12 +159,13 @@
                 <p>20</p>
                 <div class="dim" id="20"></div>
             </td>
-        </tr>
-        <tr class="tr4">
             <td>
                 <p>21</p>
                 <div class="dim" id="21"></div>
             </td>
+        </tr>
+        <tr class="tr4">
+            
             <td>
                 <p>22</p>
                 <div class="dim" id="22"></div>
@@ -191,12 +190,13 @@
                 <p>27</p>
                 <div class="dim" id="27"></div>
             </td>
-        </tr>
-        <tr class="tr5">
             <td>
                 <p>28</p>
                 <div class="dim" id="28"></div>
             </td>
+        </tr>
+        <tr class="tr5">
+            
             <td>
                 <p>29</p>
                 <div class="dim" id="29"></div>
@@ -221,6 +221,10 @@
                 <p></p>
                 <div></div>
             </td>
+            <td>
+                    <p></p>
+                    <div></div>
+                </td>
         </tr>
 
     </table>
@@ -233,6 +237,35 @@
     <script id='header-template' type="text/x-handlebars-template">
         <h1>{{name}}</h1>
     </script>
+
+    <!-- model num 2 -->
+
+ <!-- <div class="container"> -->
+        <!-- Trigger the model with a button -->
+        <!-- <button id="eventsDay1" type="button" class="btn btn-info btn-lg" data-toggle="model" data-target="#mymodel">Today's events</button> -->
+     
+        <!-- model -->
+        <!-- <div class="model fade" id="mymodel" role="dialog"> -->
+          <!-- <div class="model-dialog"> -->
+     
+            <!-- model content-->
+            <!-- <div class="model-content"> -->
+              <!-- <div class="model-header"> -->
+                <!-- <button type="button" class="close" data-dismiss="model">&times;</button> -->
+                <!-- <h4 class="model-title">Today's events</h4> -->
+              <!-- </div> -->
+              <!-- <div class="model-body"> -->
+                <!-- <p>events</p> -->
+              <!-- </div> -->
+              <!-- <div class="model-footer"> -->
+                <!-- <button type="button" class="btn btn-default" data-dismiss="model">Close</button> -->
+              <!-- </div> -->
+            <!-- </div> -->
+     
+          <!-- </div> -->
+        <!-- </div> -->
+     
+      <!-- </div> -->
 
     <script src="handlebars\dist\handlebars.js"></script>
     <script src="jquery/dist/jquery.js"></script>

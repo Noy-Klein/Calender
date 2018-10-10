@@ -35,6 +35,7 @@ class EventsRenderer {
     //works:
 
     renderMonth(i) {
+        $('.header').empty()
         let source = $('#header-template').html();
         let template = Handlebars.compile(source);
         let newHTML = template(this.months[i]); // בהנדל ברס אני צריכה רק לכתוב {{name}}

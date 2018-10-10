@@ -7,6 +7,8 @@ let eventsRenderer = new EventsRenderer();
 let eventsHandler = new EventsHandler(eventsRepository, eventsRenderer)
 
 eventsHandler.onLoad();
+eventsHandler.nextMonth();
+eventsHandler.previousMonth();
 eventsHandler.onLoadMonth();
 eventsHandler.registerAddEvent();
 eventsHandler.close();
