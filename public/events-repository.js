@@ -15,13 +15,13 @@ class EventsRepository {
             this.events = data;
         })
     }
-
-    addEvent(title, day, month, year, time, location, image) {
+    // year,
+    addEvent(title, day, month, time, location, image) {
         let event = {
             title: title,
             day: day,
             month: month,
-            year: year,
+            year: "2018",
             time: time,
             location: location,
             image: image
