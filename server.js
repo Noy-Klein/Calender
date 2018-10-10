@@ -45,6 +45,13 @@ app.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=off&mod=on&nx=of
         res.send(data)
         console.log(data)
     }
+app.delete('/events/:id', function(req,res){
+    let id = req.params.id;
+    event.findByIdAndRemove(id).exec(function(err, data){
+        if(err){res.status(500).send(err)}
+        res.send(data);
+        console.log('deleted!')
+    })
 })
 
 app.listen(SERVER_PORT, () => {

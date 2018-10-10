@@ -27,6 +27,22 @@ class EventsRepository {
             this.events = data;
         })
     }
+
+    deleteEvent(ID) {
+        return $.ajax({
+            method: 'DELETE',
+            url: '/events/' + ID
+        }).then(()=>{
+            for(let i in this.events){
+                if(this.events[i]._id == ID){
+                    this.events.splice(i,1)
+                }
+            }
+        })
+        .fail((err)=>{
+            if(err) {throw err}
+        })
+    }
     // year,
     addEvent(title, day, month, time, location, image) {
         let event = {
@@ -40,7 +56,7 @@ class EventsRepository {
         }
         return $.post('/events', event).then((data)=> {
             this.events.push(data);
-            console.log(data);
+            // console.log(data);
         })
     }
 }
