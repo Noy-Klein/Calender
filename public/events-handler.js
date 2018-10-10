@@ -2,7 +2,7 @@ class EventsHandler {
     constructor(eventsRepository, eventsRenderer) {
         this.eventsRepository = eventsRepository;
         this.eventsRenderer = eventsRenderer;
-        this.nm = this.eventsRepository.getMonth();
+        this.cm = this.eventsRepository.getMonth();
     }
 
     onLoad() {
@@ -13,19 +13,28 @@ class EventsHandler {
 
     nextMonth() {
         $("#next").on('click', () => {
-            this.eventsRenderer.renderMonth(this.nm + 1)
-            this.nm++
-            console.log(this.nm)
-            if (this.nm == 11) {
-                const nextButton = $('#next')
-                nextButton.css('display', 'none');
-                return;
-            }
+
+            this.eventsRenderer.renderMonth(this.cm + 1)
+            this.cm++
+            console.log(this.cm)
+            const nextButton = $('#next')
+            const previousButton = $('#previous')
+            if (this.cm == 11) {nextButton.css('display', 'none')}
+            if (this.cm == 10) {nextButton.css('display', 'block')}
+            if (this.cm == 1) {previousButton.css('display', 'block')}
         })
     }
     previousMonth() {
-        $("#Previous").on('click', () => {
-            this.eventsRenderer.renderMonth(this.eventsRepository.getMonth() - 1)
+        $("#previous").on('click', () => {
+            this.eventsRenderer.renderMonth(this.cm - 1)
+            this.cm--
+            console.log(this.cm)
+            const nextButton = $('#next')
+            const previousButton = $('#previous')
+            if (this.cm == 1 ) {previousButton.css('display', 'block')}
+            if (this.cm == 0) {previousButton.css('display', 'none')}
+            if (this.cm == 10) {nextButton.css('display', 'block')}
+
         })
     }
 
