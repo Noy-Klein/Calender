@@ -2,23 +2,30 @@ class EventsHandler {
     constructor(eventsRepository, eventsRenderer) {
         this.eventsRepository = eventsRepository;
         this.eventsRenderer = eventsRenderer;
+        this.nm = this.eventsRepository.getMonth();
     }
 
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
-            this.eventsRenderer.renderEvents(this.eventsRepository.events)
+        this.eventsRenderer.renderEvents(this.eventsRepository.events)
         })
     }
 
     nextMonth() {
-
-        $("").on('click', function () { //this.eventsRenderer.renderMonth(this.eventsRepository.getMonth());
-
+        $("#next").on('click', ()=> {
+        if(this.nm == 11) {
+            const nextButton = $('#next')
+            nextButton.css('display', 'none');
+            return;
+        }
+        this.eventsRenderer.renderMonth(this.nm +1)
+        this.nm++
+        console.log(this.nm)
         })
     }
     previousMonth() {
-        $("").on('click', function () {
-
+        $("#Previous").on('click', ()=> {
+        this.eventsRenderer.renderMonth(this.eventsRepository.getMonth() -1)
         })
     }
 
