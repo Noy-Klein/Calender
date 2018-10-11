@@ -10,6 +10,7 @@ class EventsRenderer {
     renderHolidays(holidays) {
         for (let h of holidays) {
             console.log(h);
+
         }
     }
 
@@ -39,6 +40,7 @@ class EventsRenderer {
 
 
 
+
     renderModel(events, cm, id) {
         $('.modal-body').find('p').empty();
         for (let e of events) {
@@ -53,8 +55,6 @@ class EventsRenderer {
             }
         }
     }
-
-
 
     currentDay(cm) {
         let today = new Date();
