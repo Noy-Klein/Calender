@@ -3,8 +3,8 @@
 
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="font-awesome/css/font-awesome.css" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -106,9 +106,10 @@
     <table class="calender">
 
         
-        <button id="previous" class="btn btn-secondary" type="button">Previous</button>
-        <button id="next" class="btn btn-secondary" type="button">Next</button><br>
-        <button class="add btn btn-primary" id="myBtn">Add Event</button>
+        <button id="previous" class="btn btn-default" type="button"><i style="font-size:48px;color:rgb(0, 255, 255)" id="icon1" class="fa fa-hand-o-left"></i></button>
+        
+        <button id="next" class="btn btn-default" type="button"><i id="icon2" class="fa fa-hand-o-right" style="font-size:48px;color:rgb(0, 255, 255)"></i></button><br>
+        <button class="add btn btn-default" id="myBtn"><i class="fa fa-file-text-o" style="font-size:48px;color:rgb(0, 255, 255"></i></button>
         <tr>
             <th class="text-center">Sunday</th>
             <th class="text-center">Monday</th>
@@ -327,8 +328,8 @@
 
         </div>
         
-        <script src="../node_modules/handlebars/dist/handlebars.js"></script>
-        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="handlebars/dist/handlebars.js"></script>
+        <script src="jquery/dist/jquery.js"></script>
         <script src="main.js" type="module"></script>
 
 </body>
