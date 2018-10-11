@@ -5,11 +5,12 @@ class EventsHandler {
         this.cm = this.eventsRepository.getMonth();
     }
 
+
     modalClick(){
         $('body').on('click','td',(event)=>{
             let id = parseInt($(event.target).find('p').text());
             console.log(id);
-            if(id==''){
+            if (id == '') {
                 id = $(event.target).text();
                 console.log(id);
             }
@@ -51,9 +52,9 @@ class EventsHandler {
             console.log(this.cm)
             const nextButton = $('#next')
             const previousButton = $('#previous')
-            if (this.cm == 11) {nextButton.css('display', 'none')}
-            if (this.cm == 10) {nextButton.css('display', 'block')}
-            if (this.cm == 1) {previousButton.css('display', 'block')}
+            if (this.cm == 11) { nextButton.css('display', 'none') }
+            if (this.cm == 10) { nextButton.css('display', 'block') }
+            if (this.cm == 1) { previousButton.css('display', 'block') }
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
         })
     }
@@ -65,9 +66,9 @@ class EventsHandler {
             console.log(this.cm)
             const nextButton = $('#next')
             const previousButton = $('#previous')
-            if (this.cm == 1 ) {previousButton.css('display', 'block')}
-            if (this.cm == 0) {previousButton.css('display', 'none')}
-            if (this.cm == 10) {nextButton.css('display', 'block')}
+            if (this.cm == 1) { previousButton.css('display', 'block') }
+            if (this.cm == 0) { previousButton.css('display', 'none') }
+            if (this.cm == 10) { nextButton.css('display', 'block') }
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
         })
     }
@@ -123,9 +124,10 @@ class EventsHandler {
 
         })
 
-        
+
+      
+             
     }
-    
 }
 
 export default EventsHandler;
