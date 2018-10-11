@@ -7,7 +7,6 @@ let eventsRenderer = new EventsRenderer();
 let eventsHandler = new EventsHandler(eventsRepository, eventsRenderer)
 
 eventsHandler.onLoad();
-eventsHandler.renderHolidays()
 eventsRenderer.renderHolidays();
 eventsHandler.nextMonth();
 eventsHandler.previousMonth();
@@ -17,5 +16,6 @@ eventsHandler.close();
 eventsHandler.addEventDetails();
 eventsHandler.modalClick();
 eventsHandler.delete();
-eventsHandler.renderHoliday();
+// eventsHandler.getHolidays();
+// eventsHandler.renderHoliday();
 
