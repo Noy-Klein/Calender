@@ -5,13 +5,8 @@ class EventsRepository {
     }
 
     getHolidays() {
-        $.ajax({
-            method: 'GET',
-            url: 'https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=off&mod=on&nx=off&year=now&month=x&ss=off&mf=off&c=off&geo=none&geonameid=3448439&m=50&s=off',
-            success: function(data) {
-                this.holidays = data.items;
-                // console.log(this.holidays);
-            }
+        return $.get('https://www.hebcal.com/hebcal/?v=1&cfg=json&maj=on&min=off&mod=on&nx=off&year=now&month=x&ss=off&mf=off&c=off&geo=none&geonameid=3448439&m=50&s=off').then((data)=>{
+            this.holidays = data.items;
         })
     }
 
@@ -56,7 +51,6 @@ class EventsRepository {
         }
         return $.post('/events', event).then((data)=> {
             this.events.push(data);
-            // console.log(data);
         })
     }
 }
