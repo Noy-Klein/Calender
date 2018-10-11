@@ -7,11 +7,9 @@ class EventsRenderer {
     }
 
     renderHolidays(holidays) {
-        // let holiday = holidays[0].date
-        // let json = JSON.stringify(holiday)
-        console.log(holidays)
-        for (let h in holidays) {
-
+        for (let h of holidays) {
+            console.log(h)
+            
         }
     }
 

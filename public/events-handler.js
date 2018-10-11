@@ -32,6 +32,12 @@ class EventsHandler {
         })
     }
 
+    renderHolidays() {
+        this.eventsRepository.getHolidays().then(()=> {
+            this.eventsRenderer.renderHolidays(this.eventsRepository.holidays)
+        })
+    }
+
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
