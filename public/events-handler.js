@@ -5,9 +5,9 @@ class EventsHandler {
         this.cm = this.eventsRepository.getMonth();
     }
 
-    modalClick() {
-        $('body').on('click', 'td', (event) => {
-            // console.log(event.target.id)
+
+    modalClick(){
+        $('body').on('click','td',(event)=>{
             let id = parseInt($(event.target).find('p').text());
             console.log(id);
             if (id == '') {
@@ -33,6 +33,12 @@ class EventsHandler {
         })
     }
 
+    renderHolidays() {
+        this.eventsRepository.getHolidays().then(()=> {
+            this.eventsRenderer.renderHolidays(this.eventsRepository.holidays)
+        })
+    }
+
     onLoad() {
         this.eventsRepository.getEvents().then(() => {
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
@@ -52,6 +58,7 @@ class EventsHandler {
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
         })
     }
+
     previousMonth() {
         $("#previous").on('click', () => {
             this.eventsRenderer.renderMonth(this.cm - 1)
@@ -91,7 +98,6 @@ class EventsHandler {
             let title = $(".title").val();
             let day = $(".day").val();
             let month = $('.model-content').find('.month').val();
-            // console.log(month);
             let time = $(".time").val();
             let location = $(".location").val();
             let image = $(".image").val();
