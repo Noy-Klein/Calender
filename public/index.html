@@ -1,339 +1,302 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="font-awesome/css/font-awesome.css" />
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="font-awesome/css/font-awesome.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
-
 <body>
-
-    <h1 class="header"></h1>
-
-    <br>
-    <br>
-
-    <!-- The model -->
-    <div id="mymodel" class="model">
-
-        <div class="model-content">
-
-            <span class="close">&times;</span>
-            <h3>Fill new event details:</h3>
-            <br>
-            <input type="text" class="title" placeholder="Title">
-            <br>
-            <br>
-            <div style="margin: 0 auto">
-
-                <select value="days" name="days" class="day" style="width: 70px; display: inline-block">
-                    <option value="01">1</option>
-                    <option value="02">2</option>
-                    <option value="03">3</option>
-                    <option value="04">4</option>
-                    <option value="05">5</option>
-                    <option value="06">6</option>
-                    <option value="07">7</option>
-                    <option value="08">8</option>
-                    <option value="09">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select value="months" name="months" class="month" style="width: 107px; display: inline-block">
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <br>
-                <br>
-            </div>
-            <input type="text" class="time" placeholder="Time">
-            <br>
-            <br>
-
-            <input type="text" class="image" placeholder="Image">
-            <br>
-            <br>
-
-            <input type="text" class="location" placeholder="Location">
-            <br>
-            <br>
-            <br>
-            <button id="addButton" class="submit btn btn-primary">Add</button>
-        </div>
-
+  <h1 class="header"></h1>
+  <br>
+  <br>
+  <!-- The model -->
+  <div id="mymodel" class="model">
+    <div class="model-content">
+      <span class="close">&times;</span>
+      <h3>Fill new event details:</h3>
+      <br>
+      <input type="text" class="title" placeholder="Title">
+      <br>
+      <br>
+      <div style="margin: 0 auto">
+        <select value="days" name="days" class="day" style="width: 70px; display: inline-block">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+        <select value="months" name="months" class="month" style="width: 107px; display: inline-block">
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <br>
+        <br>
+      </div>
+      <input type="text" class="time" placeholder="Time">
+      <br>
+      <br>
+      <input type="text" class="image" placeholder="Image">
+      <br>
+      <br>
+      <input type="text" class="location" placeholder="Location">
+      <br>
+      <br>
+      <br>
+      <button id="addButton" class="submit btn btn-primary">Add</button>
     </div>
-
-    <div id="month" class="text-center"></div>
-    <table class="calender">
-
-        
-        <button id="previous" class="btn btn-default" type="button"><i style="font-size:48px;color:rgb(0, 255, 255)" id="icon1" class="fa fa-hand-o-left"></i></button>
-        
-        <button id="next" class="btn btn-default" type="button"><i id="icon2" class="fa fa-hand-o-right" style="font-size:48px;color:rgb(0, 255, 255)"></i></button><br>
-        <button class="add btn btn-default" id="myBtn"><i class="fa fa-file-text-o" style="font-size:48px;color:rgb(0, 255, 255)"></i></button>
-        <tr>
-            <th class="text-center">Sunday</th>
-            <th class="text-center">Monday</th>
-            <th class="text-center">Tuesday</th>
-            <th class="text-center">Wednesday</th>
-            <th class="text-center">Thursday</th>
-            <th class="text-center">Friday</th>
-            <th class="text-center">Saturday</th>
-        </tr>
-
-
-        <tr class="tr1">
-
-            <td class="cell1" data-toggle="modal" data-target="#myModal">1
-                <p id="number" style="display:none">1</p>
-                <div class="dim" id="1"></div>
-            </td>
-            <td class="cell2" data-toggle="modal" data-target="#myModal">2
-                <p id="number" style="display:none">2</p>
-                <div class="dim" id="2"></div>
-            </td>
-            <td class="cell3" data-toggle="modal" data-target="#myModal">3
-                <p id="number" style="display:none">3</p>
-                <div class="dim" id="3"></div>
-            </td>
-            <td class="cell4" data-toggle="modal" data-target="#myModal">4
-                <p id="number" style="display:none">4</p>
-                <div class="dim" id="4"></div>
-            </td>
-            <td class="cell5" data-toggle="modal" data-target="#myModal">5
-                <p id="number" style="display:none">5</p>
-
-                <div class="dim" id="5"></div>
-            </td>
-            <td class="cell6" data-toggle="modal" data-target="#myModal">6
-                <p id="number" style="display:none">6</p>
-                <div class="dim" id="6"></div>
-            </td>
-            <td class="cell7" data-toggle="modal" data-target="#myModal">7
-                <p id="number" style="display:none">7</p>
-                <div class="dim" id="7"></div>
-            </td>
-        </tr>
-        <tr class="tr2">
-
-            <td class="cell8" data-toggle="modal" data-target="#myModal">8
-                <p id="number" style="display:none">8</p>
-
-                <div class="dim" id="8"></div>
-
-            </td>
-            <td class="cell9" data-toggle="modal" data-target="#myModal">9
-                <p id="number" style="display:none">9</p>
-                <div class="dim" id="9"></div>
-            </td>
-            <td class="cell10" class='cell10' data-toggle="modal" data-target="#myModal">10
-                <p id="number" style="display:none">10</p>
-                <div class="dim" id="10"></div>
-            </td>
-            <td class="cell11" data-toggle="modal" class="cell11" data-target="#myModal">11
-                <p id="number" style="display:none">11</p>
-                <div class="dim" id="11"></div>
-            </td>
-            <td class="cell12" data-toggle="modal" data-target="#myModal">12
-                <p id="number" style="display:none">12</p>
-                <div class="dim" id="12"></div>
-            </td>
-            <td class="cell113" data-toggle="modal" data-target="#myModal">13
-                <p id="number" style="display:none">13</p>
-                <div class="dim" id="13"></div>
-            </td>
-            <td class="cell14" data-toggle="modal" data-target="#myModal">14
-                <p id="number" style="display:none">14</p>
-                <div class="dim" id="14"></div>
-            </td>
-        </tr>
-        <tr class="tr3">
-
-            <td class="cell15" data-toggle="modal" data-target="#myModal">15
-                <p id="number" style="display:none">15</p>
-                <div class="dim" id="15"></div>
-            </td>
-            <td class="cell16" data-toggle="modal" data-target="#myModal">16
-                <p id="number" style="display:none">16</p>
-                <div class="dim" id="16"></div>
-            </td>
-            <td class="cell17" data-toggle="modal" data-target="#myModal">17
-                <p id="number" style="display:none">17</p>
-                <div class="dim" id="17"></div>
-            </td>
-            <td class="cell18" data-toggle="modal" data-target="#myModal">18
-                <p id="number" style="display:none">18</p>
-                <div class="dim" id="18"></div>
-            </td>
-            <td class="cell19" data-toggle="modal" data-target="#myModal">19
-                <p id="number" style="display:none">19</p>
-                <div class="dim" id="19"></div>
-            </td>
-            <td class="cell20" data-toggle="modal" data-target="#myModal">20
-                <p id="number" style="display:none">20</p>
-                <div class="dim" id="20"></div>
-            </td>
-            <td class="cell21" data-toggle="modal" data-target="#myModal">21
-                <p id="number" style="display:none">21</p>
-                <div class="dim" id="21"></div>
-            </td>
-        </tr>
-        <tr class="tr4">
-
-            <td class="cell22" data-toggle="modal" data-target="#myModal">22
-                <p id="number" style="display:none">22</p>
-                <div class="dim" id="22"></div>
-            </td>
-            <td class="cell23" data-toggle="modal" data-target="#myModal">23
-                <p id="number" style="display:none">23</p>
-                <div class="dim" id="23"></div>
-            </td>
-            <td class="cell24" data-toggle="modal" data-target="#myModal">24
-                <p id="number" style="display:none">24</p>
-                <div class="dim" id="24"></div>
-            </td>
-            <td class="cell25" data-toggle="modal" data-target="#myModal">25
-                <p id="number" style="display:none">25</p>
-                <div class="dim" id="25"></div>
-            </td>
-            <td class="cell26" data-toggle="modal" data-target="#myModal">26
-                <p id="number" style="display:none">26</p>
-                <div class="dim" id="26"></div>
-            </td>
-            <td class="cell27" data-toggle="modal" data-target="#myModal">27
-                <p id="number" style="display:none">27</p>
-                <div class="dim" id="27"></div>
-            </td>
-            <td class="cell28" data-toggle="modal" data-target="#myModal">28
-                <p id="number" style="display:none">28</p>
-                <div class="dim" id="28"></div>
-            </td>
-        </tr>
-        <tr class="tr5">
-
-            <td class="cell29" data-toggle="modal" data-target="#myModal">29
-                <p id="number" style="display:none">29</p>
-                <div class="dim" id="29"></div>
-            </td>
-            <td class="cell30" data-toggle="modal" data-target="#myModal">30
-                <p id="number" style="display:none">30</p>
-                <div class="dim" id="30"></div>
-            </td>
-            <td class="cell31" data-toggle="modal" data-target="#myModal">31
-                <p id="number" style="display:none">31</p>
-                <div class="dim" id="31"></div>
-            </td>
-            <td>
-                <p></p>
-                <div></div>
-            </td>
-            <td>
-                <p></p>
-                <div></div>
-            </td>
-            <td>
-                <p></p>
-                <div></div>
-            </td>
-            <td>
-                <p></p>
-                <div></div>
-            </td>
-        </tr>
-
-
-    </table>
+  </div>
+  <div id="month" class="text-center"></div>
+  <table class="calender">
     
-    <script id='event-template' type="text/x-handlebars-template">
-       <div class="day cell{{day}}">
-            <p>{{title}}</p>
+    <button id="previous" class="btn btn-default" type="button"><i style="font-size:48px;color:rgb(0, 255, 255)" id="icon1" class="fa fa-hand-o-left"></i></button>
+    
+    <button id="next" class="btn btn-default" type="button"><i id="icon2" class="fa fa-hand-o-right" style="font-size:48px;color:rgb(0, 255, 255)"></i></button><br>
+    <button class="add btn btn-default" id="myBtn"><i class="fa fa-file-text-o" style="font-size:48px;color:rgb(0, 255, 255)"></i></button>
+    <tr>
+      <th class="text-center">Sunday</th>
+      <th class="text-center">Monday</th>
+      <th class="text-center">Tuesday</th>
+      <th class="text-center">Wednesday</th>
+      <th class="text-center">Thursday</th>
+      <th class="text-center">Friday</th>
+      <th class="text-center">Saturday</th>
+    </tr>
+    <tr class="tr1">
+      <td class="cell1" data-toggle="modal" data-target="#myModal">1
+        <p id="number" style="display:none">1</p>
+        <div class="dim" id="1"></div>
+      </td>
+      <td class="cell2" data-toggle="modal" data-target="#myModal">2
+        <p id="number" style="display:none">2</p>
+        <div class="dim" id="2"></div>
+      </td>
+      <td class="cell3" data-toggle="modal" data-target="#myModal">3
+        <p id="number" style="display:none">3</p>
+        <div class="dim" id="3"></div>
+      </td>
+      <td class="cell4" data-toggle="modal" data-target="#myModal">4
+        <p id="number" style="display:none">4</p>
+        <div class="dim" id="4"></div>
+      </td>
+      <td class="cell5" data-toggle="modal" data-target="#myModal">5
+        <p id="number" style="display:none">5</p>
+        <div class="dim" id="5"></div>
+      </td>
+      <td class="cell6" data-toggle="modal" data-target="#myModal">6
+        <p id="number" style="display:none">6</p>
+        <div class="dim" id="6"></div>
+      </td>
+      <td class="cell7" data-toggle="modal" data-target="#myModal">7
+        <p id="number" style="display:none">7</p>
+        <div class="dim" id="7"></div>
+      </td>
+    </tr>
+    <tr class="tr2">
+      <td class="cell8" data-toggle="modal" data-target="#myModal">8
+        <p id="number" style="display:none">8</p>
+        <div class="dim" id="8"></div>
+      </td>
+      <td class="cell9" data-toggle="modal" data-target="#myModal">9
+        <p id="number" style="display:none">9</p>
+        <div class="dim" id="9"></div>
+      </td>
+      <td class="cell10" class='cell10' data-toggle="modal" data-target="#myModal">10
+        <p id="number" style="display:none">10</p>
+        <div class="dim" id="10"></div>
+      </td>
+      <td class="cell11" data-toggle="modal" class="cell11" data-target="#myModal">11
+        <p id="number" style="display:none">11</p>
+        <div class="dim" id="11"></div>
+      </td>
+      <td class="cell12" data-toggle="modal" data-target="#myModal">12
+        <p id="number" style="display:none">12</p>
+        <div class="dim" id="12"></div>
+      </td>
+      <td class="cell113" data-toggle="modal" data-target="#myModal">13
+        <p id="number" style="display:none">13</p>
+        <div class="dim" id="13"></div>
+      </td>
+      <td class="cell14" data-toggle="modal" data-target="#myModal">14
+        <p id="number" style="display:none">14</p>
+        <div class="dim" id="14"></div>
+      </td>
+    </tr>
+    <tr class="tr3">
+      <td class="cell15" data-toggle="modal" data-target="#myModal">15
+        <p id="number" style="display:none">15</p>
+        <div class="dim" id="15"></div>
+      </td>
+      <td class="cell16" data-toggle="modal" data-target="#myModal">16
+        <p id="number" style="display:none">16</p>
+        <div class="dim" id="16"></div>
+      </td>
+      <td class="cell17" data-toggle="modal" data-target="#myModal">17
+        <p id="number" style="display:none">17</p>
+        <div class="dim" id="17"></div>
+      </td>
+      <td class="cell18" data-toggle="modal" data-target="#myModal">18
+        <p id="number" style="display:none">18</p>
+        <div class="dim" id="18"></div>
+      </td>
+      <td class="cell19" data-toggle="modal" data-target="#myModal">19
+        <p id="number" style="display:none">19</p>
+        <div class="dim" id="19"></div>
+      </td>
+      <td class="cell20" data-toggle="modal" data-target="#myModal">20
+        <p id="number" style="display:none">20</p>
+        <div class="dim" id="20"></div>
+      </td>
+      <td class="cell21" data-toggle="modal" data-target="#myModal">21
+        <p id="number" style="display:none">21</p>
+        <div class="dim" id="21"></div>
+      </td>
+    </tr>
+    <tr class="tr4">
+      <td class="cell22" data-toggle="modal" data-target="#myModal">22
+        <p id="number" style="display:none">22</p>
+        <div class="dim" id="22"></div>
+      </td>
+      <td class="cell23" data-toggle="modal" data-target="#myModal">23
+        <p id="number" style="display:none">23</p>
+        <div class="dim" id="23"></div>
+      </td>
+      <td class="cell24" data-toggle="modal" data-target="#myModal">24
+        <p id="number" style="display:none">24</p>
+        <div class="dim" id="24"></div>
+      </td>
+      <td class="cell25" data-toggle="modal" data-target="#myModal">25
+        <p id="number" style="display:none">25</p>
+        <div class="dim" id="25"></div>
+      </td>
+      <td class="cell26" data-toggle="modal" data-target="#myModal">26
+        <p id="number" style="display:none">26</p>
+        <div class="dim" id="26"></div>
+      </td>
+      <td class="cell27" data-toggle="modal" data-target="#myModal">27
+        <p id="number" style="display:none">27</p>
+        <div class="dim" id="27"></div>
+      </td>
+      <td class="cell28" data-toggle="modal" data-target="#myModal">28
+        <p id="number" style="display:none">28</p>
+        <div class="dim" id="28"></div>
+      </td>
+    </tr>
+    <tr class="tr5">
+      <td class="cell29" data-toggle="modal" data-target="#myModal">29
+        <p id="number" style="display:none">29</p>
+        <div class="dim" id="29"></div>
+      </td>
+      <td class="cell30" data-toggle="modal" data-target="#myModal">30
+        <p id="number" style="display:none">30</p>
+        <div class="dim" id="30"></div>
+      </td>
+      <td class="cell31" data-toggle="modal" data-target="#myModal">31
+        <p id="number" style="display:none">31</p>
+        <div class="dim" id="31"></div>
+      </td>
+      <td>
+        <p></p>
+        <div></div>
+      </td>
+      <td>
+        <p></p>
+        <div></div>
+      </td>
+      <td>
+        <p></p>
+        <div></div>
+      </td>
+      <td>
+        <p></p>
+        <div></div>
+      </td>
+    </tr>
+  </table>
+  
+  <script id='event-template' type="text/x-handlebars-template">
+    <div class="day cell{{day}}">
+      <p>{{title}}</p>
+    </div>
+  </script>
+  <script id='header-template' type="text/x-handlebars-template">
+    <h1>{{name}}</h1>
+  </script>
+  <script id='modal-template' type="text/x-handlebars-template">
+    <ul>
+    <li data-id="{{_id}}">{{title}} - {{day}}.{{month}}.2018 - {{time}} At {{location}}<span><img class="delete" src="https://photos2.fotosearch.com/bthumb/CSP/CSP534/grey-garbage-can-on-white-background-stock-illustration__k5348776.jpg"></span> </li>
+    <img src="{{image}}">
+    <br>
+    <br>
+  </ul>
+  </script>
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button id="x" type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <p>
+            <h4 id="today" class="modal-title">Today's Events:</h4>
+          </p>
+          <div class="modal-body">
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
         </div>
-    </script>
-
-    <script id='header-template' type="text/x-handlebars-template">
-        <h1>{{name}}</h1>
-    </script>
-
-    <script id='modal-template' type="text/x-handlebars-template">
-        <ul>
-        <li data-id="{{_id}}">{{title}} - {{day}}.{{month}}.2018 - {{time}} At {{location}}<span><img class="delete" src="https://photos2.fotosearch.com/bthumb/CSP/CSP534/grey-garbage-can-on-white-background-stock-illustration__k5348776.jpg"></span> </li>
-        <img src="{{image}}">
-        <br>
-        <br>
-    </ul>
-    </script>
-
-    <div class="container">
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button id="x" type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <p>
-                        <h4 id="today" class="modal-title">Today's Events:</h4>
-                    </p>
-                    <div class="modal-body">
-                        <p></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        
-        <script src="handlebars/dist/handlebars.js"></script>
-        <script src="jquery/dist/jquery.js"></script>
-        <script src="main.js" type="module"></script>
+      </div>
+    </div>
+    
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="main.js" type="module"></script>
 
 </body>
-
-
 </html>
