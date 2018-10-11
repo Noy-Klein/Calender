@@ -6,6 +6,12 @@ class EventsHandler {
     }
 
 
+    renderHoliday(){
+        this.eventsRepository.getHolidays().then(()=>{
+            this.eventsRenderer.renderHolidays(this.eventsRepository.holidays);
+        })
+    }
+
     modalClick(){
         $('body').on('click','td',(event)=>{
             let id = parseInt($(event.target).find('p').text());
@@ -49,7 +55,6 @@ class EventsHandler {
         $("#next").on('click', () => {
             this.eventsRenderer.renderMonth(this.cm + 1)
             this.cm++
-            console.log(this.cm)
             const nextButton = $('#next')
             const previousButton = $('#previous')
             if (this.cm == 11) { nextButton.css('display', 'none') }
@@ -63,13 +68,13 @@ class EventsHandler {
         $("#previous").on('click', () => {
             this.eventsRenderer.renderMonth(this.cm - 1)
             this.cm--
-            console.log(this.cm)
             const nextButton = $('#next')
             const previousButton = $('#previous')
             if (this.cm == 1) { previousButton.css('display', 'block') }
             if (this.cm == 0) { previousButton.css('display', 'none') }
             if (this.cm == 10) { nextButton.css('display', 'block') }
             this.eventsRenderer.renderEvents(this.eventsRepository.events, this.cm);
+            this.currentDay();
         })
     }
 

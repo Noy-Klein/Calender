@@ -17,3 +17,5 @@ eventsHandler.close();
 eventsHandler.addEventDetails();
 eventsHandler.modalClick();
 eventsHandler.delete();
+eventsHandler.renderHoliday();
+
